@@ -12,11 +12,4 @@ const router = createRouter({
   routes,
 })
 
-// Enviar page_view a Google Analytics en cada cambio de ruta (SPA)
-router.afterEach((to) => {
-  if (typeof gtag === 'function') {
-    gtag('config', 'G-XXXXXXXXXX', { page_path: to.path })
-  }
-})
-
 export default router
